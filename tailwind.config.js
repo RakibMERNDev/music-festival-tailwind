@@ -5,4 +5,10 @@ module.exports = {
     extend: {},
   },
   plugins: [require("./plugins/openVariant")],
+  vairants: {
+    extend: {
+      display: ["group-open"],
+      visibility: ["peer-open"],
+    },
+  },
 };
