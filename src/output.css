@@ -843,10 +843,6 @@ body {
   display: block;
 }
 
-.peer:hover ~ .peer-hover\:to-black{
-  --tw-gradient-to: #000 var(--tw-gradient-to-position);
-}
-
 .group.open .group-open\:-top-2{
   top: -0.5rem;
 }
