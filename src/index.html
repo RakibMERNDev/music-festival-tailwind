@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
-    <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
-    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+    <script src="./assets/fontawesome/js/solid.min.js"></script>
+    <script src="./assets/fontawesome/js/fontawesome.min.js"></script>
     <script>
       window.onload = () => {
         const mobileMenuIcon = document.getElementById("mobile-menu-button");
@@ -16,93 +17,84 @@
             mobileMenuIcon.classList.add("open");
           }
         });
-        const ticketsMenuIcon = document.getElementById("ticket-menu-button");
-        ticketsMenuIcon.addEventListener("click", () => {
-          if (ticketsMenuIcon.classList.contains("open")) {
-            ticketsMenuIcon.classList.remove("open");
+
+        const ticketsMenuItem = document.getElementById("ticket-menu-item");
+        ticketsMenuItem.addEventListener("click", () => {
+          if (ticketsMenuItem.classList.contains("open")) {
+            ticketsMenuItem.classList.remove("open");
           } else {
-            ticketsMenuIcon.classList.add("open");
+            ticketsMenuItem.classList.add("open");
           }
         });
       };
     </script>
   </head>
-  <body>
-    <main>
+  <body class="dark">
+    <main class="bg-zinc-200 pb-40 dark:bg-zinc-900">
       <header class="text-zinc-200">
         <nav
-          class="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500"
+          class="sticky top-0 z-10 flex bg-gradient-to-r from-rose-500 to-pink-500"
         >
-          <div class="flex items-center p-2 gap-2">
-            <img
-              src="./assets/images/logo-inverted.png"
-              alt="logo"
-              width="50"
-            />
-            <div class="font-bold text-2xl">
-              <span class="">tw</span> :<span class="text-sky-900">mf</span>
+          <div class="flex items-center gap-2 p-2">
+            <img src="./assets/images/logo-inverted.png" width="50" />
+            <div class="text-2xl font-bold">
+              tw:<span class="text-sky-900">mf</span>
             </div>
           </div>
 
-          <!--! mobile navigation -->
+          <!-- ! mobile menu starts from here -->
 
-          <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
-            <div id="mobile-menu-button" class="group peer">
+          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+            <button id="mobile-menu-button" class="group peer">
               <div
-                class="top-0 bg-zinc-200 rounded-full w-8 h-1 group-open:rotate-45 transition-all group-open:top-2 relative"
+                class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
               ></div>
               <div
-                class="bg-zinc-200 rounded-full w-8 h-1 mt-1 opacity-100 group-open:opacity-0 transition-all"
+                class="mt-1 h-1 w-8 rounded-full bg-zinc-200 opacity-100 transition-all group-open:opacity-0"
               ></div>
               <div
-                class="top-0 bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-rotate-45 transition-all group-open:-top-2 relative"
+                class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
               ></div>
-            </div>
-
+            </button>
             <div
-              class="absolute top-[62px] bg-gradient-to-r from-rose-500 to-pink-500 w-full left-0 peer-open:block hidden"
+              class="absolute left-0 top-[62px] hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
             >
               <div
-                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
+                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
               >
                 <span>Home</span>
               </div>
               <div
-                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
+                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
               >
                 <span>Lineup</span>
               </div>
-
-              <!-- !Have issues with ticket menu, will fix this later -->
               <div
                 id="ticket-menu-item"
-                class="group relative h-full cursor-pointer text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
+                class="group relative h-full cursor-pointer text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
               >
-                <div class="p-4 font-bold">Tickets</div>
+                <div class="p-4 text-center font-bold">Tickets</div>
                 <div class="hidden group-open:block">
                   <div
-                    class="text-center p-4 text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/5 ease-in-out"
+                    class="relative p-4 text-center text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200"
                   >
-                    <span>Single day Ticket</span>
+                    <span>Single day ticket</span>
                   </div>
                   <div
-                    class="text-center p-4 text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/5 ease-in-out"
+                    class="relative p-4 text-center text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200"
                   >
-                    <span> day Ticket</span>
+                    <span>7 day ticket</span>
                   </div>
                 </div>
               </div>
               <div
-                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
+                class="relative flex h-full cursor-pointer items-center justify-center p-4 font-bold text-pink-200 transition-colors hover:bg-white/10 hover:text-zinc-200"
               >
                 <span>Support</span>
               </div>
             </div>
           </div>
-
-          <!--! dekstop navigation -->
-
-          <div class="hidden md:flex flex-1 items-center justify-end">
+          <div class="hidden flex-1 items-center justify-end md:flex">
             <div class="menu-item">
               <span>Home</span>
             </div>
@@ -112,17 +104,17 @@
             <div class="menu-item group">
               <span>Tickets</span>
               <div
-                class="group-hover:block hidden absolute top-full bg-pink-500 right-0 whitespace-nowrap rounded-b-md text-right"
+                class="absolute right-0 top-full hidden whitespace-nowrap rounded-b-md bg-pink-500 text-right group-hover:block"
               >
                 <div
-                  class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200"
+                  class="cursor-pointer p-4 font-bold text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200"
                 >
-                  <span>Single Day Ticket</span>
+                  <span>Single day ticket</span>
                 </div>
                 <div
-                  class="p-4 font-bold hover:bg-white/5 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200"
+                  class="cursor-pointer p-4 font-bold text-pink-200 transition-colors ease-in-out hover:bg-white/5 hover:text-zinc-200"
                 >
-                  <span>7 Day Ticket</span>
+                  <span>7 day ticket</span>
                 </div>
               </div>
             </div>
@@ -133,12 +125,12 @@
         </nav>
         <div
           style="background-image: url('./assets/images/hero.jpg')"
-          class="bg-cover bg-center bg-fixed flex flex-col items-center justify-center h-[calc(100vh-200px)] min-h-[400px]"
+          class="flex h-[calc(100vh-200px)] min-h-[400px] flex-col items-center justify-center bg-cover bg-fixed bg-center"
         >
-      
-
-      </div>
-      
+          <div
+            class="bg-white/30 py-2 px-4 rounded-xl text-center backdrop-blur-md"
+          ></div>
+        </div>
       </header>
     </main>
   </body>
