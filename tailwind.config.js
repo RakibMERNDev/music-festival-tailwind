@@ -14,7 +14,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("./plugins/openVariant")],
+  plugins: [require("./plugins/openVariant"), require("./plugins/animationDelay")],
   vairants: {
     extend: {
       display: ["group-open"],
