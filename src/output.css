@@ -714,6 +714,10 @@ h6{
   margin-top: 1rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .mt-\[-70px\]{
   margin-top: -70px;
 }
@@ -812,6 +816,14 @@ h6{
 
 .grow{
   flex-grow: 1;
+}
+
+.caption-bottom{
+  caption-side: bottom;
+}
+
+.border-collapse{
+  border-collapse: collapse;
 }
 
 .rotate-180{
@@ -933,6 +945,11 @@ h6{
   border-color: rgb(255 255 255 / 0.4);
 }
 
+.border-zinc-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(113 113 122 / var(--tw-border-opacity));
+}
+
 .bg-pink-100{
   --tw-bg-opacity: 1;
   background-color: rgb(252 231 243 / var(--tw-bg-opacity));
@@ -997,8 +1014,17 @@ h6{
   padding: 0.5rem;
 }
 
+.p-3{
+  padding: 0.75rem;
+}
+
 .p-4{
   padding: 1rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4{
@@ -1040,6 +1066,11 @@ h6{
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm{
@@ -1158,6 +1189,10 @@ h6{
 
 .animation-delay-\[75ms\]{
   animation-delay: 75ms;
+}
+
+.caption-bottom{
+  caption-side: bottom;
 }
 
 .hover\:bg-sky-900:hover{
