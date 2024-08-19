@@ -703,6 +703,10 @@ h6{
   margin-left: -0.5rem;
 }
 
+.mb-32{
+  margin-bottom: 8rem;
+}
+
 .mb-5{
   margin-bottom: 1.25rem;
 }
@@ -737,6 +741,10 @@ h6{
 
 .mt-\[-70px\]{
   margin-top: -70px;
+}
+
+.mb-48{
+  margin-bottom: 12rem;
 }
 
 .block{
@@ -793,6 +801,10 @@ h6{
 
 .h-full{
   height: 100%;
+}
+
+.h-svh{
+  height: 100svh;
 }
 
 .min-h-\[400px\]{
